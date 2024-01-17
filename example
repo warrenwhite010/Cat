@@ -15,13 +15,10 @@ import re
 
 look_for_port = re.compile(r':[port]+')
 
-# Create a regex object that matches port values 0 to 65535
+# Create a regex object that matches port values 0 to 65535, the numbers wont be longer than 5 numbers
+
 port_regex = re.compile(r':[0-9]+')
 
-
-# The numbers next to the word port, look for anything that has the name "port" and collect the numbers after
-
-# Capture all the examples with port in it
 
 # The numbers should have whitespace on either side
 
