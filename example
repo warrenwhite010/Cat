@@ -15,7 +15,7 @@ import re
 
 look_for_port = re.compile(r':[port]+')
 
-# Create a regex object that matches port values 0 to 65535
+# The string of numbers will match port values 0 to 65535
 
 port_regex = re.compile(r':[0-9]+')
 
@@ -26,11 +26,16 @@ port-regex1 = r"\b\s*\d{1,5}\s*\b"
 # Ignore the string of numbers if it is longer than 5 numbers
 
 
-# Iterate over the lines of the log file
+# Iterate over the log file to look for port number matches
+
 with open('logfile.txt', 'r') as f:
     for line in f:
         # Use the regex object to search for matches
         match = port_regex.search(line)
+
+        # Look for 
+        matches = re.findall(pattern, text)
+            print(matches) 
 
         # If a match is found, extract the port value and print it to the console
         if match:
